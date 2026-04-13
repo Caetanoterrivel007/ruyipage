@@ -25,14 +25,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/LoseNine/ruyipage?style=social)](https://github.com/LoseNine/ruyipage/stargazers)
 [![Downloads](https://static.pepy.tech/badge/ruyipage)](https://pepy.tech/project/ruyipage)
 
-## 相关链接
+## 配套项目
 
-- 项目文档：<https://0xshoulderlab.site/automation>
-- PyPI：<https://pypi.org/project/ruyiPage/>
-- GitHub 仓库：<https://github.com/LoseNine/ruyipage>
-- AI 自动化分析运行 Skill：<https://github.com/LoseNine/ruyipage-skill?tab=readme-ov-file>
-- Firefox 指纹浏览器项目：<https://github.com/LoseNine/firefox-fingerprintBrowser>
-- WebDriver BiDi：<https://w3c.github.io/webdriver-bidi/>
+如果你准备把 `ruyiPage` 用在 AI 自动化分析、复杂网页采集或高风控页面场景，建议先看这两个配套项目：
+
+- **AI 自动化分析运行 Skill**
+  面向 AI 协作和自动化分析场景的运行说明与实践入口，适合先了解如何把 `ruyiPage` 接进你的工作流：<https://github.com/LoseNine/ruyipage-skill?tab=readme-ov-file>
+- **Firefox 指纹浏览器项目**
+  用于需要 Firefox 指纹环境、浏览器接管或更高真实度自动化场景，适合和 `ruyiPage` 搭配使用：<https://github.com/LoseNine/firefox-fingerprintBrowser>
 
 ---
 

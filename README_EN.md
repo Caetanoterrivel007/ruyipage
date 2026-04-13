@@ -25,14 +25,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/LoseNine/ruyipage?style=social)](https://github.com/LoseNine/ruyipage/stargazers)
 [![Downloads](https://static.pepy.tech/badge/ruyipage)](https://pepy.tech/project/ruyipage)
 
-## Links
+## Companion Projects
 
-- Docs: <https://0xshoulderlab.site/automation>
-- PyPI: <https://pypi.org/project/ruyiPage/>
-- GitHub repository: <https://github.com/LoseNine/ruyipage>
-- AI automation analysis runtime skill: <https://github.com/LoseNine/ruyipage-skill?tab=readme-ov-file>
-- Firefox fingerprint browser project: <https://github.com/LoseNine/firefox-fingerprintBrowser>
-- WebDriver BiDi: <https://w3c.github.io/webdriver-bidi/>
+If you plan to use `ruyiPage` for AI-driven automation analysis, advanced web data capture, or high-risk browser workflows, start with these two companion projects:
+
+- **AI automation analysis runtime skill**
+  A practical entry point for AI-assisted workflows and runtime guidance around `ruyiPage`, useful when you want to plug it into an analysis or automation pipeline: <https://github.com/LoseNine/ruyipage-skill?tab=readme-ov-file>
+- **Firefox fingerprint browser project**
+  Intended for cases where you need a Firefox fingerprint environment, browser takeover, or more realistic automation behavior alongside `ruyiPage`: <https://github.com/LoseNine/firefox-fingerprintBrowser>
 
 ---
 
