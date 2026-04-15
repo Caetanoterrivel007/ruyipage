@@ -24,6 +24,7 @@ import json
 import os
 import sys
 import time
+from pathlib import Path
 
 
 if sys.platform == "win32":
@@ -31,8 +32,10 @@ if sys.platform == "win32":
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
 
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-sys.path.insert(0, os.path.dirname(__file__))
+BASE_DIR = Path(__file__).resolve().parent
+
+sys.path.insert(0, str(BASE_DIR.parent))
+sys.path.insert(0, str(BASE_DIR))
 
 from ruyipage import launch
 
@@ -61,10 +64,8 @@ def s_shape_points(start_x, start_y, width=320, height=220, count=26):
 
 
 def main():
-    test_page = os.path.join(
-        os.path.dirname(__file__), "test_pages", "action_visual_mouse_only.html"
-    )
-    file_url = "file:///" + os.path.abspath(test_page).replace("\\", "/")
+    test_page = BASE_DIR / "test_pages" / "action_visual_mouse_only.html"
+    file_url = test_page.resolve().as_uri()
 
     page = launch(
         action_visual=True,
