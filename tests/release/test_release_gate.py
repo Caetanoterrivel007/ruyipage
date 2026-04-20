@@ -1,0 +1,80 @@
+# -*- coding: utf-8 -*-
+"""发版前最小通过集合。
+
+这类测试本身不承载复杂逻辑，而是把当前版本最关键、最稳定、
+对用户最有感知的能力收束成一组可快速执行的 release gate。
+"""
+
+import pytest
+
+
+@pytest.mark.release
+@pytest.mark.smoke
+def test_release_gate_startup(page):
+    page.get("about:blank")
+    assert page.url == "about:blank"
+
+
+@pytest.mark.release
+@pytest.mark.local_server
+def test_release_gate_navigation(page, server):
+    page.get(server.get_url("/nav/basic"))
+    assert page.title == "Nav Basic"
+
+
+@pytest.mark.release
+def test_release_gate_click_and_input(page, fixture_page_url):
+    page.get(fixture_page_url("basic_form.html"))
+    page.ele("#click-btn").click_self()
+    page.ele("#text-input").input("release gate")
+    page.ele("#mirror-btn").click_self()
+    assert page.ele("#click-result").text == "clicked"
+    assert page.ele("#mirror").text == "release gate"
+
+
+@pytest.mark.release
+@pytest.mark.local_server
+def test_release_gate_response_body(page, server):
+    captured = []
+
+    def handler(req):
+        if "/api/data" in req.url:
+            req.continue_response()
+            captured.append(req.response_body)
+        else:
+            req.continue_response()
+
+    page.get("about:blank")
+    page.intercept.start_responses(handler, collect_response=True)
+    try:
+        page.run_js(
+            "fetch(arguments[0]).catch(()=>null); return true;",
+            server.get_url("/api/data"),
+            as_expr=False,
+        )
+        page.wait(0.8)
+    finally:
+        page.intercept.stop()
+
+    assert captured
+    assert '"status": "ok"' in (captured[0] or "")
+
+
+@pytest.mark.release
+@pytest.mark.local_server
+def test_release_gate_cookies(page, server):
+    page.get(server.get_url("/set-cookie"))
+    cookies = {c.name: c.value for c in page.get_cookies(all_info=True)}
+    assert cookies.get("server_cookie") == "server_value"
+
+
+@pytest.mark.release
+def test_release_gate_private_mode(opts_factory, temp_user_dir):
+    from ruyipage import FirefoxPage
+
+    page = FirefoxPage(opts_factory(private=True, user_dir=temp_user_dir))
+    try:
+        page.get("about:blank")
+        assert page.url == "about:blank"
+    finally:
+        page.quit()

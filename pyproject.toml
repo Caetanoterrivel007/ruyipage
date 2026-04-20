@@ -44,3 +44,15 @@ include-package-data = true
 [tool.setuptools.packages.find]
 include = ["ruyipage*"]
 exclude = ["examples*", "dist*", "build*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"
+markers = [
+  "smoke: 最核心的启动与基础行为回归",
+  "feature: 模块级能力回归",
+  "integration: 多模块串联工作流回归",
+  "release: 发版前最小通过集合",
+  "local_server: 依赖本地测试 server",
+]

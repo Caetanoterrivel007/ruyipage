@@ -15,7 +15,11 @@ from ruyipage import FirefoxOptions, FirefoxPage
 
 
 def main():
-    html_path = Path(__file__).with_name("46_human_behavior_showcase.html").resolve()
+    html_path = (
+        Path(__file__).resolve().parent
+        / "test_pages"
+        / "46_human_behavior_showcase.html"
+    )
 
     opts = FirefoxOptions()
     opts.enable_action_visual(True)
