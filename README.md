@@ -66,6 +66,8 @@
   面向 JavaScript / Node.js 生态的配套实现，适合希望在 JS 项目里接入 `ruyiPage` 思路与能力的场景：<https://github.com/GanFish404/ruyipage-js>
 - 🐹 **Go 语言实现：ruyipage-go**
   由社区实现的 Go 版本，适合需要在 Go 项目中接入 Firefox 自动化能力的场景。感谢 @pll177 的实现与维护：<https://github.com/pll177/ruyipage-go>
+- 🖥️ **桌面端 GUI 管理工具：ruyiBrowser-GUI**
+  基于 Electron + Vue3 的 Firefox 指纹浏览器图形化管理工具，无需命令行即可创建、管理和启动多个独立指纹环境。感谢 @jacklaigougou 的实现与维护：<https://github.com/jacklaigougou/ruyiBrowser-GUI>
 
 ---
 

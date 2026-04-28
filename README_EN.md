@@ -66,6 +66,8 @@ If you plan to use `ruyiPage` for AI-driven automation analysis, advanced web da
   A companion implementation for the JavaScript / Node.js ecosystem, useful when you want to bring the `ruyiPage` approach and capabilities into JS-based projects: <https://github.com/GanFish404/ruyipage-js>
 - 🐹 **Go implementation: ruyipage-go**
   A community-maintained Go implementation for teams that want to integrate Firefox automation capabilities into Go projects. Thanks to @pll177 for the implementation and maintenance: <https://github.com/pll177/ruyipage-go>
+- 🖥️ **Desktop GUI manager: ruyiBrowser-GUI**
+  A graphical Firefox fingerprint browser management tool built with Electron + Vue3. Create, manage, and launch multiple isolated fingerprint environments without the command line. Thanks to @jacklaigougou for the implementation and maintenance: <https://github.com/jacklaigougou/ruyiBrowser-GUI>
 
 ---
 
