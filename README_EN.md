@@ -58,8 +58,6 @@ If you plan to use `ruyiPage` for AI-driven automation analysis, advanced web da
 
 - 📘 **Documentation / Automation Docs**
   A central place for `ruyiPage` automation guidance, integration notes, and supporting project documentation: <https://0xshoulderlab.site/automation>
-- 🤖 **AI automation analysis runtime skill**
-  A practical entry point for AI-assisted workflows and runtime guidance around `ruyiPage`, useful when you want to plug it into an analysis or automation pipeline: <https://github.com/LoseNine/ruyipage-skill?tab=readme-ov-file>
 - 🦊 **Firefox fingerprint browser project**
   Intended for cases where you need a Firefox fingerprint environment, browser takeover, or more realistic automation behavior alongside `ruyiPage`: <https://github.com/LoseNine/firefox-fingerprintBrowser>
 - 🟨 **JavaScript implementation: ruyipage-js**

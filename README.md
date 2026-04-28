@@ -58,8 +58,6 @@
 
 - 📘 **官方文档 / 自动化文档**
   更系统地查看 `ruyiPage` 相关自动化说明、接入方式和配套能力说明：<https://0xshoulderlab.site/automation>
-- 🤖 **AI 自动化分析运行 Skill**
-  面向 AI 协作和自动化分析场景的运行说明与实践入口，适合先了解如何把 `ruyiPage` 接进你的工作流：<https://github.com/LoseNine/ruyipage-skill?tab=readme-ov-file>
 - 🦊 **Firefox 指纹浏览器项目**
   用于需要 Firefox 指纹环境、浏览器接管或更高真实度自动化场景，适合和 `ruyiPage` 搭配使用：<https://github.com/LoseNine/firefox-fingerprintBrowser>
 - 🟨 **JavaScript 实现：ruyipage-js**
